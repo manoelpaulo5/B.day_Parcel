@@ -1,0 +1,82 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 180px;
+    background-image: url(../images/LaMelo-Ball-Wallpaper-HD.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$corCover;
+        content: '';
+        opacity: .7;
+    }
+
+    &__logo {
+        display: flex;
+        margin: 0 auto;
+        height: 120px;
+        margin-bottom: 35px;
+    }
+
+    &__super-letter {
+        text-transform: uppercase;
+        font-size: 34px;
+        font-weight: bold;
+        color: variables.$corTexto;
+    }
+
+    &__timer {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+
+        p {
+            padding: 8px;
+            color: variables.$corTexto;
+            font-size: 24px;
+            background-image: linear-gradient(90deg, variables.$corSuperLetter, variables.$corSecondLetter);
+            border-radius: 12px;
+            border: 2px solid variables.$corTexto;
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        p {
+            width: 23%;
+            padding: 8px;
+            text-align: center;
+            color: #fff;
+            background-image: linear-gradient(90deg, variables.$corSuperLetter, variables.$corSecondLetter);
+            border-radius: 12px;
+            border: 2px solid variables.$corTexto;
+        }
+    }
+
+    @media (max-width: 640px) {
+        padding: 40px 0;
+        background-position: center;
+
+        .flex-container {
+            p {
+                width: 50%;
+            }
+        }
+    }
+}

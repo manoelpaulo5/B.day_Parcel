@@ -1,0 +1,46 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 16px 24px;
+    background-image: linear-gradient(90deg, variables.$corSuperLetter, variables.$corSecondLetter);
+    border: 2px solid variables.$corTexto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+
+    &__infos {
+        display: flex;
+        gap: 40px;
+
+        &__item {
+            font-size: 14px;
+            color: variables.$corTexto;
+
+            b {
+                color: variables.$corTexto;
+                font-size: 18px;
+                display: block;
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        max-width: 90%;
+        margin: 0 auto;
+
+        &__infos {
+            display: block;
+            margin-bottom: 8px;
+
+            &__item {
+                margin-bottom: 24px;
+            }
+        }
+
+        a {
+            display: block;
+        }
+    }
+}

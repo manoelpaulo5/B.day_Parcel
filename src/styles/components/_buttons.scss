@@ -1,0 +1,23 @@
+@use '../variables';
+
+.button {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    &--primary {
+        color: variables.$corTexto;
+        background-image: linear-gradient(270deg, variables.$corSuperLetter, variables.$corSecondLetter);
+        border-radius: 12px;
+        border: 2px solid variables.$corTexto;
+    }
+
+    @media (max-width: 640px) {
+        &--primary {
+            margin-top: 16px;
+        }
+    }
+}
